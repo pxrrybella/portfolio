@@ -19,6 +19,12 @@
             </ul>
         </nav>
 
+        <nav class="sidebar-right">
+            <ul>
+                <li><p class="clock"></p></li>
+            </ul>
+        </nav>
+
         <section class="mainsection">
             <div class="subsection">
                 <h2 class="welcome-text" id="name">Welcome!</h2>
@@ -98,13 +104,35 @@
             <div class="subsection">
                 <h1 id="links">Links</h1>
                 <ul>
-                    <li><a href="mailto:iparryurbina@gmail.com">Mail contact</a></li>
-                    <li><a href="https://www.linkedin.com/in/parryisabella/">LinkedIn profile</a></li>
-                    <li><a href="https://github.com/pxrrybella">GitHub profile</a></li>
+                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
+                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/8q3IU0qYg112iT30T8.mp4#t=0.001" type="video/mp4">
+                    </video>
+                        <a href="mailto:iparryurbina@gmail.com">Mail contact</a></li>
+                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
+                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/ujceQ6Op20bYPr4S2E.mp4#t=0.001" type="video/mp4">
+                    </video>
+                        <a href="https://www.linkedin.com/in/parryisabella/">LinkedIn profile</a></li>
+                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
+                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/4oC1G2JdrNT9g3HMr1.mp4#t=0.001" type="video/mp4">
+                    </video>
+                        <a href="https://github.com/pxrrybella">GitHub profile</a></li>
                 </ul>
                 <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
             </div>
         </section>
     </main>
 </body>
+<script>
+
+    function yourFunction(){
+        const date = new Date();
+        const p = document.querySelector('.clock');
+        const hours = date.getHours();
+        const minutes = date.getMinutes();
+        p.innerText = `${hours} : ${minutes}`;
+    setTimeout(yourFunction, 10000);
+}
+
+yourFunction();
+</script>
 </html>
