@@ -6,28 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabella's Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="/js/index.js" defer></script>
 </head>
 <body class="bg">
+    <canvas id="canvas"></canvas>
     <main class="mainbody">
+
+        <section class="sidebars-section">
         <nav class="sidebar">
             <ul>
-                <li><a href="#name">Introduction</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#art">Drawings</a></li>
-                <li><a href="#links">Links</a></li>
+                <a href="#name"><li>Introduction</li></a>
+                <a href="#skills"><li>Skills</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#art"><li>Drawings</li></a>
             </ul>
         </nav>
+        
 
         <nav class="sidebar-right">
             <ul>
-                <li><p class="clock"></p></li>
+                <a href="mailto:iparryurbina@gmail.com"><li>
+                    Mail contact</li></a>
+                <a href="https://www.linkedin.com/in/parryisabella/"><li>
+                    LinkedIn profile</li></a>
+                <a href="https://github.com/pxrrybella"><li>
+                    GitHub profile</li></a>
+                <li class="clock"></li>
             </ul>
         </nav>
+    </section>
 
         <section class="mainsection">
-            <div class="subsection">
-                <h2 class="welcome-text" id="name">Welcome!</h2>
+            <div class="subsection"  id="name">
+                <h2 class="welcome-text typewriter">Welcome!</h2>
                 <p class="introduction">
                     Hi everyone! My name is Isabella Parry, and I am thrilled to share my passion for front-end development with you today. <br/>
                     For me, becoming a front-end developer is not only a career choice, but a way to blend my love for creativity and technology. Just like how art allows me to express myself through drawing, painting, and music, front-end development offers a canvas where I can bring people's ideas for their webpages to life. <br/>
@@ -54,8 +65,8 @@
                 <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
             </div>
 
-            <div class="subsection">
-                <h1 id="skills">Skills</h1>
+            <div class="subsection" id="skills">
+                <h1>Skills</h1>
                 <small class="skill-list">
                     <ul>
                         <li>Javascript</li>
@@ -75,8 +86,8 @@
                 <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
             </div>
 
-            <div class="subsection">
-                <h1 id="projects">Projects</h1>
+            <div class="subsection" id="projects">
+                <h1>Projects</h1>
                 <span>In my <a href="https://github.com/pxrrybella">GitHub profile</a> you can find all my projects and practice material.</span>
                 <p>But here are my <b>bigger frontend projects</b> to date:</p>
                     <ul>
@@ -87,8 +98,8 @@
                 <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
             </div>
 
-            <div class="subsection">
-                <h1 id="art">Drawings</h1>
+            <div class="subsection" id="art">
+                <h1>Drawings</h1>
                 <p><a href="https://tintabrisaarchive.tumblr.com/">Here</a> you can find some of my drawings, but I'm trying to move everything to <a href="https://tintabrisa.tumblr.com/">this</a> site, I'm still woking on it but we'll get to it! <br/>
                 Make sure to check other artists, there are plenty of amazing drawings on Tumblr!</p>
                 <picture class="drawings">
@@ -101,38 +112,7 @@
                 <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
             </div>
 
-            <div class="subsection">
-                <h1 id="links">Links</h1>
-                <ul>
-                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
-                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/8q3IU0qYg112iT30T8.mp4#t=0.001" type="video/mp4">
-                    </video>
-                        <a href="mailto:iparryurbina@gmail.com">Mail contact</a></li>
-                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
-                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/ujceQ6Op20bYPr4S2E.mp4#t=0.001" type="video/mp4">
-                    </video>
-                        <a href="https://www.linkedin.com/in/parryisabella/">LinkedIn profile</a></li>
-                    <li><video loop="loop" autoplay="autoplay" muted="muted" width="30">
-                        <source src="https://d1k5j68ob7clqb.cloudfront.net/processed/thumb/4oC1G2JdrNT9g3HMr1.mp4#t=0.001" type="video/mp4">
-                    </video>
-                        <a href="https://github.com/pxrrybella">GitHub profile</a></li>
-                </ul>
-                <p class="divider">─── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ───</p>
-            </div>
         </section>
     </main>
 </body>
-<script>
-
-    function yourFunction(){
-        const date = new Date();
-        const p = document.querySelector('.clock');
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        p.innerText = `${hours} : ${minutes}`;
-    setTimeout(yourFunction, 10000);
-}
-
-yourFunction();
-</script>
 </html>

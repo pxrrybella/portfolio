@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Raleway:ital,wght@0,200;0,300;0,500;1,200&display=swap');
 
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
 .mainbody {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     font-family: 'Raleway', sans-serif;
     color:rgb(255, 255, 255);
 }
@@ -11,62 +16,74 @@
     width: 50rem;
 }
 
+/* SIDEBAR LEFT */
+
 .sidebar {
     position: fixed;
-    left: 50px;
-    padding: 50px;
-}
-
-
-.sidebar-right {
-    position: fixed;
-    top: 20px;
-    right: 60px;
-    margin: 30px;
-}
-
-.sidebar-right li {
-    background-color: rgba(255, 255, 255, 0.116);
-    font-family: 'Pangolin', cursive;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 5px;
-    margin: 10px;
-    width: 7rem;
-    list-style-type: none;
-    padding: 10px;
-    transition: all 0.4s;
-}
-
-.sidebar-right li:hover {
-    cursor: default;
-    background: linear-gradient(-60deg, #e69cf8, #ff8b77, #ff92e7, #ff8989);
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
-    transition: all 0.5s;
+    left: 10px;
+    margin-top: 40px;
+    width: 15rem;
+    text-align: left;
 }
 
 .sidebar li {
-    cursor: pointer;
+    color:white;
+    padding: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.116);
     border-radius: 5px;
-    margin: 10px;
-    list-style-type: none;
-    padding: 10px;
-    transition: all 0.4s;
-}
-
-.sidebar li a {
-    text-decoration: none;
-    color: white;
+    transition: background-color 0.5s;
 }
 
 .sidebar li:hover {
-    cursor: pointer;
-    background: linear-gradient(-60deg, #e69cf8, #ff8b77, #ff92e7, #ff8989);
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
-    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 0.247);
+}
+
+.sidebar ul li::marker {
+    content: '';
+}
+
+.sidebar a {
+    text-decoration: none;
+    margin-bottom: 10x;
+}
+
+/* SIDEBAR RIGHT */
+
+.sidebar-right {
+    position: fixed;
+    right: 10px;
+    margin-top: 40px;
+    padding-right: 2.3em;
+    width: 15rem;
+    text-align: left;
+}
+
+.sidebar-right li {
+    color:white;
+    padding: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    text-align: center;
+    list-style: square;
+    background-color: rgba(255, 255, 255, 0.116);
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+.sidebar-right li:hover {
+    background-color: rgba(255, 255, 255, 0.247);
+}
+
+.sidebar-right ul li::marker {
+    content: '';
+}
+
+.sidebar-right a {
+    text-decoration: none;
+    margin-bottom: 10x;
 }
 
 .skill-list {
@@ -86,12 +103,15 @@
 }
 
 .bg {
+    background: linear-gradient(55deg, #0fb8ad 0%, #493464 51%, #212c4b 85%);
+}
+
+.bgs {
     background: linear-gradient(-45deg, #90609c, #F99B7D, #a37b99, #B04759);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     transition: all 0.5s;
 }
-
 
 .subsection {
     margin: 30px;
@@ -110,6 +130,7 @@
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.5s, border-radius 0.5s;
 }
 
 .subsection a::before, .subsection a::after {
@@ -118,9 +139,7 @@
 
 .subsection a:hover{
     cursor: pointer;
-    background: linear-gradient(-60deg, #e69cf8, #ff8b77, #ff92e7, #ff8989);
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
+    background-color: rgba(255, 255, 255, 0.247);
     border-radius: 5px;
 }
 
@@ -153,10 +172,6 @@
 
 .welcome-text:hover {
     cursor: default;
-    background: linear-gradient(-60deg, #e69cf8, #ff8b77, #ff92e7, #ff8989);
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
-    border-radius: 5px;
 }
 
 .drawings {
@@ -178,14 +193,168 @@
     border-radius: 5px;
 }
 
-@keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+.canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+/* DEMO-SPECIFIC STYLES - efect by @geoffgraham on CodePen*/
+.typewriter {
+    color: #fff;
+    font-family: 'Pangolin', cursive;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgba(255, 255, 255, 0.589); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
   }
+  
+  /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+  /* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-right: .15em solid rgba(255, 255, 255, 0.589); }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainbody {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainsection {
+        width: 100%;
+    }
+    #canvas {
+        display: none;
+    }
+
+    .sidebars-section {
+        height: 10rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(255, 255, 255, 0.219);
+    }
+
+    .sidebar {
+        margin-right: 50px;
+        width: 100%;
+        left: 0px;
+        margin: 0px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .sidebar ul {
+        margin-left: -40px;
+    }
+
+    .sidebar li {
+        display: inline
+    }
+    
+    .sidebar-right {
+        width: 100%;
+        right: 0px;
+        margin: 0px 0px;
+        padding-right: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .sidebar-right .clock {
+        display: none;
+    }
+
+    .sidebar-right li {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    #canvas {
+        display: none;
+    }
+
+    .welcome-text{
+        font-size: 20px;
+    }
+    
+    .mainbody {
+        flex-direction: column-reverse;
+    }
+
+    .sidebars-section {
+        width: 100%;
+        height: 17rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.219);
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar-right {
+        position: relative;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sidebar-right ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar-right li {
+    display: block;
+    }
+    
+    .sidebar-right ul::before {
+        content: '.~*+ ¡Contact me! +*~.';
+    }
+
+    .sidebar-right .clock {
+        display: none;
+    }
+
+    #projects ul {
+        margin-top: 10px;
+    }
+
+    #projects ul li {
+        text-align: center;
+        flex-direction: column;
+        margin-left: -40px;
+    }
+
+    .project-image {
+        width: 80%;
+    }
+}
