@@ -1,5 +1,5 @@
 
-//RELOJ
+//CLOCK
 function showClock(){
     const date = new Date();
     const li = document.querySelector('.clock');

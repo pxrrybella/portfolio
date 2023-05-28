@@ -103,14 +103,7 @@
 }
 
 .bg {
-    background: linear-gradient(55deg, #0fb8ad 0%, #493464 51%, #212c4b 85%);
-}
-
-.bgs {
-    background: linear-gradient(-45deg, #90609c, #F99B7D, #a37b99, #B04759);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    transition: all 0.5s;
+    background: linear-gradient(55deg, #a981b9 0%, #493464 51%, #212c4b 85%);
 }
 
 .subsection {
