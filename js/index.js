@@ -3,10 +3,19 @@
 function showClock(){
     const date = new Date();
     const li = document.querySelector('.clock');
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
+
+    var hours = date.getHours();
+	if (hours >= 1 && hours <= 9) {
+		hours = '0' + hours;
+	}
+
+    var minutes = date.getMinutes();
+	if (minutes >= 1 && minutes <= 9) {
+		minutes = '0' + minutes;
+	}
+
 	if ( hours >= 7 && hours < 12 ){
-		li.innerText = `Good morning! (❀❛ ֊ ❛„)♡ \n ${hours} : ${minutes}`;
+		li.innerText = `Good morning!  \n (❀❛ ֊ ❛„)♡ \n ${hours} : ${minutes}`;
 	} else if ( hours >= 12 && hours < 20){
 		li.innerText = `Hope u having a great day! (ꈍᴗꈍ)♡ \n ${hours} : ${minutes}`;
 	} else if (hours >= 20){
@@ -19,6 +28,17 @@ setTimeout(showClock, 1000);
 }
 
 showClock();
+
+//CELLPHONE NAVBAR
+const button = document.querySelector('.navbar-button');
+const menuSidebars = document.querySelector('.sidebars-section');
+
+button.addEventListener('click', () => {
+	menuSidebars.classList.toggle('sidebars-section-hide');
+	menuSidebars.classList.toggle('sidebars-section-show');
+}
+)
+
 
 //BACKGROUND
 const canvas = document.querySelector('#canvas');
