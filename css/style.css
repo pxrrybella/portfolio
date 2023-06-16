@@ -157,7 +157,7 @@
 }
 
 .welcome-text {
-    font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Simsun';
     font-size: 3rem;
     margin: -10px;
 }
@@ -199,7 +199,7 @@
 /* DEMO-SPECIFIC STYLES - efect by @geoffgraham on CodePen*/
 .typewriter {
     color: #fff;
-    font-family: 'Pangolin', cursive;
+    font-family: 'Simsun';
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid rgba(255, 255, 255, 0.589); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
