@@ -10,6 +10,7 @@ So, in the 1.0.7 update, I've compressed the images and got rid of the custom fo
 
 CO2 emissions on first visit before ( 1.0.6 version ):
 0.481g
+
 CO2 emissions on first visit now ( 1.0.7 version ):
 0.026g
 
